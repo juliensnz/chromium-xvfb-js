@@ -1,0 +1,5 @@
+FROM markadams/chromium-xvfb-js
+
+RUN echo "deb https://deb.nodesource.com/node_8.x jessie main" > /etc/apt/sources.list.d/nodesource.list \
+  && echo "deb https://dl.yarnpkg.com/debian/ stable main" > /etc/apt/sources.list.d/yarn.list \
+  && apt-get update && apt-get install -y nodejs yarn
